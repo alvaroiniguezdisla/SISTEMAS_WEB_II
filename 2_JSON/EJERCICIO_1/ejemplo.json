@@ -1,0 +1,10 @@
+{
+  "name": "Starry Night",
+  "artist": "Vincent van Gogh",
+  "description": "A swirling night sky over a village",
+  "dimension": {
+    "width": 73.7,
+    "height": 92.1
+  },
+  "tags": ["oil", "famous"]
+}

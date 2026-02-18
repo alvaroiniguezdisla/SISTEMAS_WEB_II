@@ -1,0 +1,9 @@
+{
+  "title": "Inception",
+  "director": "Christopher Nolan",
+  "year": 2010,
+  "rating": 8.8,
+  "genre": ["Sci-Fi", "Thriller", "Action"],
+  "duration": 148,
+  "description": "A skilled thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea."
+}
