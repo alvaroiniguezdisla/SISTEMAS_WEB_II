@@ -1,0 +1,19 @@
+meta {
+  name: Persona Valida
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/persona
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Juan",
+    "apellidos": "Perez",
+    "edad": 21
+  }
+}

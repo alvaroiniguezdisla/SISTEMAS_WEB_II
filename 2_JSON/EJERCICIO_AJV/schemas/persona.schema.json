@@ -1,0 +1,21 @@
+{
+    "$id": "persona.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Persona",
+    "type": "object",
+    "properties": {
+        "nombre": {
+            "type": "string",
+            "description": "El nombre de la persona."
+        },
+        "apellidos": {
+            "type": "string",
+            "description": "Los apellidos de la persona."
+        },
+        "edad": {
+            "description": "Edad en años, que debe ser igual o mayor que cero.",
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

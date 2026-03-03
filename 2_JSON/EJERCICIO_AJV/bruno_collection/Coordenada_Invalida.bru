@@ -1,0 +1,18 @@
+meta {
+  name: Coordenada Invalida
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/coordenada
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "latitud": 100,
+    "longitud": 200
+  }
+}

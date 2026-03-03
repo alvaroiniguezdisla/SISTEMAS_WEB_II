@@ -1,0 +1,23 @@
+{
+    "$id": "https://example.com/geographical-location.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Valores de Longitud y Latitud",
+    "description": "Una coordenada geográfica.",
+    "required": [
+        "latitud",
+        "longitud"
+    ],
+    "type": "object",
+    "properties": {
+        "latitud": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+        },
+        "longitud": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+        }
+    }
+}
