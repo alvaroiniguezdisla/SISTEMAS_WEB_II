@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Orderdetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="orderdetails.xsd">
+
+  <Customer id="1">
+    <fname from="Madrid">Carlos</fname>
+    <cname>Carlos Garcia</cname>
+    <destination Country="Spain" Delivdate="2026-05-10">Madrid</destination>
+    <email>carlos.garcia@example.com</email>
+    <eid>E001</eid>
+  </Customer>
+
+  <Customer id="2">
+    <cname>Ana Lopez</cname>
+    <destination Country="France" Delivdate="2026-05-12">Paris</destination>
+    <email>ana.lopez@example.com</email>
+  </Customer>
+
+  <Customer id="3">
+    <destination Country="Germany" Delivdate="2026-05-15">Berlin</destination>
+  </Customer>
+
+</Orderdetails>
