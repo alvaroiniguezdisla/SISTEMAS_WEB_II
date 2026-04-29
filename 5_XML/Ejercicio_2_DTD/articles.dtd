@@ -1,0 +1,13 @@
+<!ELEMENT articles (article+)>
+
+<!ELEMENT article (name, month, author, reviews, feedback, reviews)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT author EMPTY>
+<!ELEMENT reviews (#PCDATA)>
+<!ELEMENT feedback (#PCDATA)>
+
+<!ATTLIST article id CDATA #REQUIRED>
+<!ATTLIST author name CDATA #REQUIRED>
+<!ATTLIST reviews lang CDATA #REQUIRED>
