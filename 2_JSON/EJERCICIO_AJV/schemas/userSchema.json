@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Usuario",
+    "description": "Un esquema de usuario para el Ejercicio de AJV",
+    "type": "object",
+    "properties": {
+        "nombre": {
+            "type": "string",
+            "description": "El nombre completo del usuario"
+        },
+        "edad": {
+            "type": "integer",
+            "minimum": 18,
+            "description": "La edad del usuario, debe ser mayor o igual a 18"
+        },
+        "email": {
+            "type": "string",
+            "format": "email",
+            "description": "La dirección de correo electrónico del usuario"
+        }
+    },
+    "required": [
+        "nombre",
+        "edad",
+        "email"
+    ],
+    "additionalProperties": false
+}

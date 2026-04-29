@@ -1,0 +1,18 @@
+meta {
+  name: Coordinate Valid
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/coordinate
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "latitude": 40.4168,
+    "longitude": -3.7038
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Product Invalid
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": "PROD-002",
+    "nombre": "Auriculares",
+    "precio": -15.50
+  }
+}

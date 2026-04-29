@@ -1,0 +1,203 @@
+openapi: 3.0.0
+info:
+  title: API Cine
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /peliculas:
+    get:
+      summary: Obtener todas las películas
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pelicula'
+    post:
+      summary: Crear una nueva película
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pelicula'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pelicula'
+        '422':
+          description: Unprocessable Entity
+
+  /peliculas/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Obtener película por ID
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pelicula'
+        '404':
+          description: Not Found
+    put:
+      summary: Actualizar una película
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pelicula'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pelicula'
+        '404':
+          description: Not Found
+    delete:
+      summary: Eliminar una película
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
+
+  /peliculas/{peliculaId}/sesiones:
+    parameters:
+      - name: peliculaId
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Obtener todas las sesiones de una película
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sesion'
+        '404':
+          description: Not Found
+    post:
+      summary: Crear una nueva sesión
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sesion'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sesion'
+        '404':
+          description: Not Found
+        '422':
+          description: Unprocessable Entity
+
+  /peliculas/{peliculaId}/sesiones/{id}:
+    parameters:
+      - name: peliculaId
+        in: path
+        required: true
+        schema:
+          type: integer
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Obtener una sesión específica
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sesion'
+        '404':
+          description: Not Found
+    put:
+      summary: Actualizar una sesión
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sesion'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sesion'
+        '404':
+          description: Not Found
+    delete:
+      summary: Eliminar una sesión
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
+
+components:
+  schemas:
+    Pelicula:
+      type: object
+      properties:
+        id:
+          type: integer
+        titulo:
+          type: string
+        director:
+          type: string
+        duracion:
+          type: integer
+        genero:
+          type: string
+        sinopsis:
+          type: string
+          
+    Sesion:
+      type: object
+      properties:
+        id:
+          type: integer
+        peliculaId:
+          type: integer
+        sala:
+          type: integer
+        fecha:
+          type: string
+        hora:
+          type: string
+        precio:
+          type: number
+        asientosDisponibles:
+          type: integer
