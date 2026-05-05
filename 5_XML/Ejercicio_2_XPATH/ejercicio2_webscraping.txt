@@ -1,0 +1,52 @@
+XPath – Ejercicio 2
+Web scraping
+
+Página usada:
+https://books.toscrape.com/catalogue/category/books/travel_2/index.html
+
+He elegido esta página porque simula una tienda online de libros y permite practicar web scraping. En la página aparecen productos con su nombre y su precio.
+
+Pasos realizados:
+1. Abrir la página en el navegador.
+2. Pulsar F12 para abrir las herramientas de desarrollador.
+3. Ir a la pestaña Elements.
+4. Pulsar Ctrl + F.
+5. Probar expresiones XPath sobre el HTML de la página.
+
+XPath para obtener todos los productos:
+
+//article[@class='product_pod']
+
+XPath para obtener los nombres de los productos:
+
+//article[@class='product_pod']//h3/a/@title
+
+XPath para obtener los precios de los productos:
+
+//article[@class='product_pod']//p[@class='price_color']/text()
+
+XPath para obtener el nombre del primer producto:
+
+(//article[@class='product_pod']//h3/a/@title)[1]
+
+XPath para obtener el precio del primer producto:
+
+(//article[@class='product_pod']//p[@class='price_color']/text())[1]
+
+
+Algunos resultados obtenidos:
+
+Producto: It's Only the Himalayas
+Precio: £45.17
+
+Producto: Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond
+Precio: £49.43
+
+Producto: See America: A Celebration of Our National Parks & Treasured Sites
+Precio: £48.87
+
+Producto: Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel
+Precio: £36.94
+
+Producto: Under the Tuscan Sun
+Precio: £37.33
