@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>XSLT Population Exercise</title>
+<style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f7f9fb;
+            color: #222;
+          }
+
+          h1 {
+            color: #005f8f;
+            margin-bottom: 5px;
+          }
+
+          .subtitle {
+            color: #555;
+            margin-bottom: 25px;
+          }
+
+          .container {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            max-width: 750px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          }
+
+          label {
+            font-weight: bold;
+          }
+
+          select {
+            padding: 6px;
+            margin-left: 8px;
+            margin-bottom: 20px;
+            min-width: 220px;
+          }
+
+          .country-data {
+            display: none;
+            margin-top: 15px;
+          }
+
+          table {
+            border-collapse: collapse;
+            width: 420px;
+            margin-top: 10px;
+          }
+
+          th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+          }
+
+          th {
+            background-color: #d9eaf7;
+          }
+
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+        </style>
+<script>
+          
+          function showCountry(countryCode) {
+            var blocks = document.getElementsByClassName("country-data");
+
+            for (var i = 0; i < blocks.length; i++) {
+              blocks[i].style.display = "none";
+            }
+
+            var selected = document.getElementById(countryCode);
+
+            if (selected) {
+              selected.style.display = "block";
+            }
+          }
+
+          window.onload = function() {
+            var selector = document.getElementById("countrySelector");
+
+            if (selector && selector.options.length > 0) {
+              showCountry(selector.value);
+            }
+          };
+          
+        </script>
+</head>
+<body><div class="container">
+<h1>Population by Country</h1>
+<p class="subtitle">
+            Indicator:
+            SP.POP.TOTL
+            -
+            Population, total</p>
+<label for="countrySelector">Choose a country:</label><select id="countrySelector" onchange="showCountry(this.value)"><option value="ABW">Aruba</option>
+<option value="FRA">France</option>
+<option value="DEU">Germany</option>
+<option value="ESP">Spain</option>
+<option value="USA">United States</option></select><div class="country-data" id="ABW">
+<h2>Aruba</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Population</th>
+</tr>
+<tr>
+<td>2018</td>
+<td>105,845</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>106,442</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>106,585</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>106,537</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>106,445</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>106,277</td>
+</tr>
+</table>
+</div>
+<div class="country-data" id="FRA">
+<h2>France</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Population</th>
+</tr>
+<tr>
+<td>2018</td>
+<td>67,158,348</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>67,388,001</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>67,571,107</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>67,764,304</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>67,971,311</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>68,287,487</td>
+</tr>
+</table>
+</div>
+<div class="country-data" id="DEU">
+<h2>Germany</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Population</th>
+</tr>
+<tr>
+<td>2018</td>
+<td>82,905,782</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>83,092,962</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>83,160,871</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>83,196,078</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>83,797,985</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>84,482,267</td>
+</tr>
+</table>
+</div>
+<div class="country-data" id="ESP">
+<h2>Spain</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Population</th>
+</tr>
+<tr>
+<td>2018</td>
+<td>46,796,540</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>47,134,837</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>47,365,655</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>47,415,794</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>47,778,340</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>48,373,336</td>
+</tr>
+</table>
+</div>
+<div class="country-data" id="USA">
+<h2>United States</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Population</th>
+</tr>
+<tr>
+<td>2018</td>
+<td>326,838,199</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>328,329,953</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>331,511,512</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>332,031,554</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>333,287,557</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>334,914,895</td>
+</tr>
+</table>
+</div>
+</div></body>
+</html>

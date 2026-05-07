@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="population.xsl"?>
+<!--
+  Subset representativo de datos de población total.
+  Fuente indicada en el enunciado: World Bank - SP.POP.TOTL
+  URL de referencia: https://data.worldbank.org/indicator/SP.POP.TOTL
+
+  Se usa un subconjunto de países y años para que el archivo sea manejable.
+-->
+<populationData source="World Bank" indicator="SP.POP.TOTL" indicatorName="Population, total">
+  <country code="ABW" name="Aruba">
+    <record year="2018" population="105845"/>
+    <record year="2019" population="106442"/>
+    <record year="2020" population="106585"/>
+    <record year="2021" population="106537"/>
+    <record year="2022" population="106445"/>
+    <record year="2023" population="106277"/>
+  </country>
+
+  <country code="ESP" name="Spain">
+    <record year="2018" population="46796540"/>
+    <record year="2019" population="47134837"/>
+    <record year="2020" population="47365655"/>
+    <record year="2021" population="47415794"/>
+    <record year="2022" population="47778340"/>
+    <record year="2023" population="48373336"/>
+  </country>
+
+  <country code="FRA" name="France">
+    <record year="2018" population="67158348"/>
+    <record year="2019" population="67388001"/>
+    <record year="2020" population="67571107"/>
+    <record year="2021" population="67764304"/>
+    <record year="2022" population="67971311"/>
+    <record year="2023" population="68287487"/>
+  </country>
+
+  <country code="DEU" name="Germany">
+    <record year="2018" population="82905782"/>
+    <record year="2019" population="83092962"/>
+    <record year="2020" population="83160871"/>
+    <record year="2021" population="83196078"/>
+    <record year="2022" population="83797985"/>
+    <record year="2023" population="84482267"/>
+  </country>
+
+  <country code="USA" name="United States">
+    <record year="2018" population="326838199"/>
+    <record year="2019" population="328329953"/>
+    <record year="2020" population="331511512"/>
+    <record year="2021" population="332031554"/>
+    <record year="2022" population="333287557"/>
+    <record year="2023" population="334914895"/>
+  </country>
+</populationData>
